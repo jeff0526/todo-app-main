@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Todo app</title>
+
+ 
+</head>
+<body>
+  <main>
+    <div class="maincontainer">
+      <div class="logocon">
+        <h1>Todo</h1>
+        <img src="images/icon-moon.svg" alt="" id="light">
+      </div>
+      <div class="addlist">
+        <div id="chkbx" onclick="btnfunction(event)"></div>
+        <input type="text" name="" id="inptnew" autocomplete="off" placeholder="Create a new todo..">
+      </div>
+      <div id="addedlist" class="listadded" ondrop="drop(event, this)"  ondragover="allowDrop(event)">
+       
+      </div>
+      <div class="navbtn">
+        <p><span id="itemnum"></span> items left</p>
+        <p id="clearbtn" class="clearbtn">Clear Completed</p>
+      </div>
+      <div class="navs">
+        <p id="defopen" class="fltrbtn" onclick="activeFunction(event)">All</p>
+        <p class="fltrbtn" onclick="activeFunction(event)">Active</p>
+        <p class="fltrbtn notif" onclick="activeFunction(event)">Completed</p>
+      </div>
+      <div class="dragdrop">
+        <p>Drag and drop to reorder list</p>
+      </div>
+    </div>
+   
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

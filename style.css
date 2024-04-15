@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+
+    /* ### Primary */
+
+    --BrightBlue: hsl(220, 98%, 61%);
+    --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    
+
+    /* ### Light Theme */
+
+--VeryLightGray: hsl(0, 0%, 98%);
+--VeryLightGrayishBlue: hsl(236, 33%, 92%);
+--LighGrayishBlue: hsl(233, 11%, 84%);
+--DarkGrayishBlue: hsl(236, 9%, 61%);
+--VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+/* ##Dark Theme */
+
+--VeyDarkBlue: hsl(235, 21%, 11%);
+--VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+--LighGrayishBlueD: hsl(234, 39%, 85%);
+--LighGrayishBlue-hover: hsl(236, 33%, 92%);
+--DarkGrayishBlueD: hsl(234, 11%, 52%);
+--VeryDarkGrayishBlueD: hsl(233, 14%, 35%);
+--VeryDarkGrayishBlueBlue: hsl(237, 14%, 26%);
+}
+
+
+*{
+    padding: 0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Josefin Sans", sans-serif;
+    background-color: var(--VeryLightGrayishBlue);
+    background-image:url(images/bg-desktop-light.jpg) ;
+    background-repeat: no-repeat; 
+    background-size:contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height:100vh; 
+}
+.body-darkmode{
+   
+    background-color: var(--VeyDarkBlue);
+    background-image: url(images/bg-desktop-dark.jpg);
+}
+.maincontainer{
+    width: 540px;
+    height: 700px;
+}
+h1{
+    text-transform: uppercase;
+    letter-spacing: .9rem;
+    color: white;
+    font-size:2.5rem;
+}
+img{
+    width:26px;
+    height: 26px;
+}
+
+.logocon{
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 0;
+}
+.addlist{
+    display: flex;
+    align-items: center;
+
+    background-color: var(--VeryLightGray);
+    margin-top: 15px;
+    height: 66px;
+    border-radius: 5px;
+    padding: 0 1.5rem;
+    gap: 1.4rem;
+}
+.addlist-darkmode{
+    background-color: var(--VeryDarkDesaturatedBlue);
+    color: var(--VeryLightGray);
+}
+#chkbx{
+    border: 1px solid var(--DarkGrayishBlue);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    
+}
+#chkbx:hover{
+    cursor: pointer;
+}
+#inptnew{
+   
+    font-family: "Josefin Sans", sans-serif;
+    
+    font-size: 1.1rem;
+    background-color: inherit;
+    
+    color: var(--DarkGrayishBlue);
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    width: 90%;
+}
+.inpttext{
+    text-decoration: line-through;
+    color: var(--DarkGrayishBlue);
+}
+.listadded{
+    
+    height: auto;
+    margin-top: 22px;
+    height: 390px;
+    border-radius: 5px 5px 0 0;
+    
+    background-color: var(--VeryLightGray);
+}
+.addedlist-darkmode{
+    background-color: var(--VeryDarkDesaturatedBlue);
+    color: var(--VeryLightGray);
+}
+
+.classfornewaddlist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 65px;
+    padding: 0 1.5rem;
+  
+    border-bottom: 1px solid var(--LighGrayishBlueD);
+}
+.classfornewaddlist-dm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 65px;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid var(--VeryDarkGrayishBlueBlue);
+}
+.adtodo{
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.imgbtn{
+    background-image: none;
+    width: 18px;
+    height: 18px;
+}
+
+.imghide{
+    background-image: url(images/icon-cross.svg);
+    cursor: pointer;
+}
+.complete{
+    border: 1px solid var(--DarkGrayishBlue);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px; 
+    padding: 5px;
+    
+}
+.adtodo p{
+    cursor: pointer;
+    
+}
+
+.complete:hover{
+    
+    cursor: pointer;
+    border: none;
+    box-shadow: 
+    -.5px -.5px 1px 0 rgba(87, 221, 255), 
+    .5px .5px 1px 0 rgba(192, 88, 243),
+    -.5px -.5px 1px 0 rgba(192, 88, 243) inset,
+    .5px .5px 1px 0 rgba(87, 221, 255)inset;
+    
+}
+.completechck{
+    position: relative;
+    border: none;
+    background-image: linear-gradient(140deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
+.completechck::after  {
+    position: absolute;
+    content: url(images/icon-check.svg);
+    
+    width: 11px;
+    height:9px;
+    right: 7px;
+}
+.navs{
+    display: flex;
+    justify-content: center;
+   
+    gap: 1.2rem;
+    font-size: .9rem;
+    font-weight: bold;
+    margin-top: -2rem;
+    color: var(--DarkGrayishBlue);
+    cursor: pointer;
+}
+.navs-dm{
+    background-color: var(--VeryDarkDesaturatedBlue);
+    color: var(--VeryDarkGrayishBlue);
+}
+.navs-dm p:hover{
+    color:var(--LighGrayishBlue-hover);
+}
+.navbtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.4rem;
+    font-size: .9rem;
+    height: 50px;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid var(--LighGrayishBlue);
+    color: var(--DarkGrayishBlue);
+    background-color: var(--VeryLightGray);
+}
+.navbtn-darkmode{
+    background-color: var(--VeryDarkDesaturatedBlue);
+    color: var(--VeryDarkGrayishBlue);
+    border-top: 1px solid var(--VeryDarkGrayishBlueBlue);
+}
+.clearbtn:hover{
+    cursor: pointer;
+    color: var(--VeryDarkGrayishBlueBlue);
+}
+.clearbtn-dm:hover{
+    color:var(--LighGrayishBlue-hover);
+}
+
+.fltrbtn:hover{
+    cursor: pointer;
+    color: var(--VeryDarkGrayishBlueBlue);
+   
+}
+
+
+.dragdrop{
+    display: flex;
+    justify-content: center;
+ 
+    margin-top: 68px;
+    font-size: .85rem;
+    color: var(--DarkGrayishBlue);
+}
+
+.Active{
+    color: var(--BrightBlue);
+}
+
+#light:hover{
+    cursor: pointer;
+    animation: move 2s;
+}
+@keyframes move {
+    50%{transform: rotate(180deg);}
+}
+
+@media screen and (max-width:900px){
+    body{
+    
+        background-image:url(images/bg-mobile-light.jpg) ;
+    }
+    .body-darkmode{
+
+        background-image: url(images/bg-mobile-dark.jpg);
+    }
+    .maincontainer{
+        width: 330px;
+        
+    }
+
+    h1{
+        font-size: 1.5rem;
+        letter-spacing: .75rem;
+    }
+    img{
+        width:20px;
+        height: 20px;
+    }
+    
+    .logocon{
+        display: flex;  
+        justify-content: space-between;
+        align-items: center;
+        padding: .7rem 0.2rem;
+       
+    }
+    .addlist{
+        margin-top: 22px;
+        height: 50px;
+        padding: 0 1.4rem;
+        gap: .7rem;
+    }
+    #chkbx{
+        border: 1px solid var(--DarkGrayishBlue);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        
+    }
+    #inptnew{
+        font-size: .75rem;
+        color: var(--DarkGrayishBlue);
+        padding: .5rem 0;
+      
+        width: 90%;
+    }
+    .listadded{
+        margin-top: 15px;
+        height: 317px;
+        
+    }
+    .classfornewaddlist{
+        height: 53px;
+        padding: 0 1.3rem;
+    }
+    .classfornewaddlist-dm{
+    
+        height: 53px;
+        padding: 0 1.3rem;
+    }
+    .adtodo{
+        gap: .8rem;
+    }
+    
+    .imgbtn{
+        width: 1px;
+        height: 1px;
+        padding: 6px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .complete{
+   
+        width: 20px;
+        height: 20px; 
+        padding:2.5px;
+        
+    }
+    .completechck::after  {
+        
+        width: 6px;
+        height:4px;
+        right: 9px;
+    }
+    .adtodo p{
+        font-size: .7rem;
+        
+    }
+    .navs{
+        align-items: center;
+        width: 330px;
+        margin-top: 1rem;
+        height: 50px;
+        border-radius: 5px;
+        background-color: var(--VeryLightGray);
+        
+    }
+    .navs-dm{
+        background-color: var(--VeryDarkDesaturatedBlue);
+        color: var(--VeryDarkGrayishBlue);
+    }
+    .navs-dm p:hover{
+        color:var(--LighGrayishBlue);
+    }
+
+    .navbtn{
+        padding: 0 1.4rem;
+        font-size: .7rem;
+    }
+
+    .dragdrop{
+        display: flex;
+        justify-content: center;
+     
+        margin-top: 40px;
+        font-size: .85rem;
+        color: var(--DarkGrayishBlue);
+    }
+}
